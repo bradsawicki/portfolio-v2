@@ -1,0 +1,65 @@
+
+.project .container {
+	padding-bottom: $base*2.5;
+
+	@include bp-min-width($medium) {
+		padding-top: $base*3;
+		padding-bottom: $base*6;
+	}
+}
+
+.project--title {
+	margin-bottom: 12px;
+	color: #fff;
+	text-align: center;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base;
+	}
+}
+
+.project--role {
+	margin-bottom: $base;
+	color: #fff;
+	text-align: center;
+
+	@include bp-min-width($medium) {
+		@include font-size(24px);
+		margin-bottom: $base*3;
+	}
+}
+
+.project--image {
+	margin-bottom: $base;
+	text-align: center;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*4;
+	}
+}
+
+.project--description {
+	@include font-size(20px);
+	max-width: 794px;
+	margin: 0 auto $base*2;
+	color: #fff;
+	line-height: 1.25;
+
+	@include bp-min-width($medium) {
+		@include font-size(24px);
+		margin-bottom: $base*3;
+	}
+}
+
+.project--site-link {
+	@include font-size(24px);
+	text-align: center;
+
+	@include bp-min-width($medium) {
+		@include font-size(30px);
+	}
+}
+
+.project--site-link a {
+	color: #fff;
+}
