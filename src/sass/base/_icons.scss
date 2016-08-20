@@ -1,0 +1,20 @@
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-finger {
+  fill: $blue;
+  width: 60px;
+  height: 30px;
+
+  @include bp-min-width($medium) {
+    width: 80px;
+    height: 39px;
+  }
+}

@@ -1,0 +1,7 @@
+.DS_Store
+
+# ignore node/gulp dependency directories
+node_modules/
+
+# SASS Cache
+.sass-cache

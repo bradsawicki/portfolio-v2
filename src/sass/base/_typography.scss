@@ -1,0 +1,46 @@
+/**
+Class Naming Structure: block--element__modifier
+**/
+
+$sans: 'Maple', Helvetica, arial, sans-serif;
+$serif: Georgia, serif;
+
+$base: 24px;
+
+$weight-book:   400;
+$weight-black:  900;
+
+body {
+  font: $weight-book 1em/1.5em $sans;
+}
+
+h1,h2,h3,h4,h5 {
+  line-height: 1;
+}
+
+.section-title {
+  @include font-size(24px);
+  font-weight: $weight-black;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include bp-min-width($medium) {
+    @include font-size(30px);
+  }
+}
+
+.title__h1 {
+  @include font-size(30px);
+  line-height: 1.25;
+
+  @include bp-min-width($medium) {
+    @include font-size(60px);
+    line-height: 1.1;
+  }
+}
+
+.body-content p,
+.body-content ul,
+.body-content ol {
+}

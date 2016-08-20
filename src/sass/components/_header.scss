@@ -1,0 +1,25 @@
+
+.header {
+	position: relative;
+	background: $blue;
+}
+
+.header .container {
+	padding: $base*2 0;
+}
+
+.header--logo {
+	@include font-size(24px);
+	display: block;
+	margin-bottom: 12px;
+	color: #fff;
+	letter-spacing: 0.05em;
+  font-weight: $weight-black;
+	text-transform: uppercase;
+	text-align: center;
+
+  @include bp-min-width($medium) {
+		@include absolute-center;
+    @include font-size(30px);
+  }
+}

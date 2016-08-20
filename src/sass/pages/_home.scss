@@ -1,0 +1,109 @@
+
+.hero {
+	background: $blue;
+	color: #fff;
+}
+
+.hero .container {
+	padding-bottom: $base*4;
+
+	@include bp-min-width($medium) {
+		padding-top: $base*4;
+		padding-bottom: $base*8;
+	}
+}
+
+.work {
+	padding-top: $base*2;
+	padding-bottom: $base;
+
+	@include bp-min-width($medium) {
+		padding-top: $base*4;
+		padding-bottom: $base*4;
+	}
+}
+
+.work .section-title {
+	margin-bottom: $base*2;
+	color: $blue;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*4;
+	}
+}
+
+.work--item {
+	display: block;
+	color: $blue;
+
+	&:hover {
+		background: rgba($blue, .05);
+	}
+
+	@include bp-max-width($medium) {
+		text-align: center;
+	}
+}
+
+.work--item-container {
+	padding: $base 0;
+
+	@include bp-min-width($medium) {
+		display: flex;
+		align-items: center;
+		max-width: 1208px;
+		margin: 0 auto;
+		padding: $base*2 0;
+	}
+}
+
+.work--item:not(:last-child) {
+	border-bottom: 1px solid $grey;
+}
+
+.work--title {
+	@include bp-max-width($medium) {
+		margin-bottom: 6px;
+	}
+
+	@include bp-min-width($medium) {
+		width: 50%;
+	}
+}
+
+.work--role {
+	@include font-size(18px);
+	line-height: 1.25;
+
+	@include bp-max-width($medium) {
+		margin-bottom: $base;
+	}
+
+	@include bp-min-width($medium) {
+		@include font-size(24px);
+		width: calc(50% - 80px);
+		max-width: 380px;
+	}
+}
+
+@keyframes fingered {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(8px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.work--icon {
+	@include bp-min-width($medium) {
+		margin-left: auto;
+	}
+}
+
+.work--item:hover .work--icon {
+	animation: fingered .5s ease-in-out infinite;
+}
