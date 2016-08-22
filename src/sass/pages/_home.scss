@@ -1,6 +1,5 @@
 
 .hero {
-	background: $blue;
 	color: #fff;
 }
 
@@ -117,7 +116,7 @@
 }
 
 .overlay {
-	transition: all .3s ease-in-out;
+	transition: transform .3s cubic-bezier(.5,0,1,.5);
 	transform: translateX(100%);
 	position: fixed;
 	top: 0;
@@ -134,4 +133,49 @@
 	&.js-is-active {
 		transform: translateX(0);
 	}
+}
+
+.about {
+	display: flex;
+}
+
+.about--bio,
+.about--image {
+	width: 50%;
+}
+
+.about--bio {
+	padding: $base*4 7%;
+	color: #fff;
+}
+
+.about--title {
+	@include font-size(30px);
+	font-weight: $weight-black;
+	margin-bottom: $base;
+}
+
+.about--bio p {
+	@include font-size(20px);
+}
+
+.about--bio p:not(:last-child) {
+	margin-bottom: $base;
+}
+
+.about--image {
+	position: relative;
+}
+
+.about--image-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+}
+
+.about--image img {
+	object-fit: cover;
 }
