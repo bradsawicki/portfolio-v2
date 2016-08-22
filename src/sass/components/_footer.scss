@@ -21,10 +21,6 @@
 
 .footer .section-title {
 	margin-bottom: $base;
-
-	@include bp-min-width($medium) {
-		margin-bottom: $base;
-	}
 }
 
 .footer--email {
@@ -35,13 +31,32 @@
 	}
 }
 
-.footer--email__desktop {
+.footer--social {
+	margin-bottom: 18px;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base;
+	}
+}
+
+.footer--copyright {
+	line-height: 1;
+
+	@include bp-min-width($medium) {
+		@include font-size(20px);
+	}
+}
+
+
+// Contact/Footer Shared Styles
+
+.email__desktop {
 	@include bp-max-width($medium) {
 		display: none;
 	}
 }
 
-.footer--email__mobile {
+.email__mobile {
 	display: inline-block;
 	padding: 6px 20px;
 	border: 2px solid $blue;
@@ -51,26 +66,16 @@
 	}
 }
 
-.footer--social {
+.social {
 	@include font-size(18px);
-	margin-bottom: 18px;
 
 	@include bp-min-width($medium) {
 		@include font-size(24px);
-		margin-bottom: $base;
 	}
 }
 
-.footer--divider {
+.divider {
 	@include bp-min-width($small) {
 		margin: 0 4px;
-	}
-}
-
-.footer--copyright {
-	line-height: 1;
-
-	@include bp-min-width($medium) {
-		@include font-size(20px);
 	}
 }

@@ -1,0 +1,84 @@
+
+.contact {
+	transition: top .2s ease-in;
+	position: fixed;
+	top: -100%;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $grey;
+	text-align: center;
+	color: $blue;
+}
+
+.contact.js-is-active {
+	top: 0;
+}
+
+.contact a {
+	color: $blue;
+}
+
+.contact--container {
+	transition: all .2s .3s ease-in;
+	opacity: 0;
+}
+
+.js-is-active .contact--container {
+	opacity: 1;
+}
+
+.contact--close {
+	opacity: 0;
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	bottom: 40px;
+
+	@include bp-min-width($medium) {
+		top: 40px;
+		right: 40px;
+	}
+}
+
+.js-is-active .contact--close {
+	transition: all .2s .3s ease-in;
+	opacity: 1;
+}
+
+.contact--close:before,
+.contact--close:after {
+	content: '';
+	position: absolute;
+	top: 18px;
+	left: 0;
+	display: block;
+	width: 40px;
+	height: 4px;
+	background: $blue;
+}
+
+.contact--close:before {
+	transform: rotate(45deg);
+}
+
+.contact--close:after {
+	transform: rotate(-45deg);
+}
+
+.contact .section-title {
+	margin-bottom: $base;
+}
+
+.contact--email {
+	margin-bottom: $base*2;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*4;
+	}
+}

@@ -3,6 +3,10 @@ body {
   background: $blue;
 }
 
+.js-no-scroll {
+  overflow: hidden;
+}
+
 .bg-pattern {
   position: fixed;
   top: 0;

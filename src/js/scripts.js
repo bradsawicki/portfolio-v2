@@ -15,6 +15,26 @@ $(function(){
     });
   }
 
+  var contactModal = function() {
+    body = $('body');
+    var contactTrigger = $('.main-nav--item__contact');
+    var contactOverlay = $('.contact');
+    var contactClose = $('.contact--close');
+
+    contactTrigger.bind('click', function(e) {
+      e.preventDefault();
+      body.addClass('js-no-scroll');
+      contactOverlay.addClass('js-is-active');
+    });
+
+    contactClose.bind('click', function(e) {
+      e.preventDefault();
+      body.removeClass('js-no-scroll');
+      contactOverlay.removeClass('js-is-active');
+    });
+  }
+
+  contactModal();
   workTransition();
 
 });
