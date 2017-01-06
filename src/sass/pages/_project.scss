@@ -3,6 +3,7 @@
 	padding-bottom: $base*2.5;
 
 	@include bp-min-width($medium) {
+		max-width: 1208px;
 		padding-top: $base*3;
 		padding-bottom: $base*6;
 	}
@@ -38,38 +39,48 @@
 	}
 }
 
-.project--desktop {
-	height: 720px;
-	padding: 3.5%;
-	background: $grey;
-	border-radius: 10px;
-}
+// .project--desktop {
+// 	height: 720px;
+// 	padding: 3.5%;
+// 	background: $grey;
+// 	border-radius: 10px;
+// }
+//
+// .project--desktop-viewport {
+// 	overflow: hidden;
+// 	overflow-y: scroll;
+// 	max-height: 100%;
+// 	border: 1px solid rgba(#000, .2);
+// }
 
-.project--desktop-viewport {
-	overflow: hidden;
-	// overflow-y: scroll;
-	max-height: 100%;
-	border: 1px solid rgba(#000, .2);
+// .project--mobile {
+// 	position: absolute;
+// 	left: 0;
+// 	bottom: -40px;
+// 	width: 300px;
+// 	height: 500px;
+// 	padding: 40px 20px;
+// 	background: $grey;
+// 	background: #363C42;
+// 	border-radius: 20px;
+// 	box-shadow: 0 0 12px rgba(#000,.2);
+// }
+//
+// .project--mobile-viewport {
+// 	overflow: hidden;
+// 	overflow-y: scroll;
+// 	max-height: 100%;
+// 	border: 1px solid rgba(#000, .2);
+// }
+
+.project--desktop {
+	margin-bottom: $base*4;
 }
 
 .project--mobile {
-	position: absolute;
-	left: 0;
-	bottom: -40px;
-	width: 300px;
-	height: 500px;
-	padding: 40px 20px;
-	background: $grey;
-	background: #363C42;
-	border-radius: 20px;
-	box-shadow: 0 0 12px rgba(#000,.2);
-}
-
-.project--mobile-viewport {
+	width: 33.333%;
+	height: $base*26;
 	overflow: hidden;
-	// overflow-y: scroll;
-	max-height: 100%;
-	border: 1px solid rgba(#000, .2);
 }
 
 .project--image {

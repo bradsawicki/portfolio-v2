@@ -34,7 +34,21 @@ $(function(){
     });
   }
 
+  var theInnernette = function() {
+    body = $('body');
+    var innernette = $('.the-innernette');
+    var innernetteTrigger = $('.innernette-trigger');
+
+    innernetteTrigger.bind('click', function(e) {
+      e.preventDefault();
+      body.toggleClass('js-no-scroll');
+      innernette.toggleClass('js-is-visible');
+    });
+
+  }
+
   contactModal();
   workTransition();
+  theInnernette();
 
 });

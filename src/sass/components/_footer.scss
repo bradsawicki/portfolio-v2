@@ -57,10 +57,6 @@
 }
 
 .email__mobile {
-	display: inline-block;
-	padding: 6px 20px;
-	border: 2px solid $blue;
-
 	@include bp-min-width($medium) {
 		display: none;
 	}

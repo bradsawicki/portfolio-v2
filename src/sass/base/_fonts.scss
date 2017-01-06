@@ -10,6 +10,22 @@
 @font-face {
   font-family: 'Maple';
   font-style: normal;
+  font-weight: 500;
+  src: url('/dist/fonts/MapleWebMedium.eot');
+  src: url('/dist/fonts/MapleWebMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Maple';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/dist/fonts/MapleWebBold.eot');
+  src: url('/dist/fonts/MapleWebBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Maple';
+  font-style: normal;
   font-weight: 900;
   src: url('/dist/fonts/MapleWebBlack.eot');
   src: url('/dist/fonts/MapleWebBlack.woff') format('woff');

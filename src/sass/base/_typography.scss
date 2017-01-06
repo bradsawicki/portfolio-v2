@@ -3,12 +3,13 @@ Class Naming Structure: block--element__modifier
 **/
 
 $sans: 'Maple', Helvetica, arial, sans-serif;
-$serif: Georgia, serif;
 
 $base: 24px;
 
-$weight-book:   400;
-$weight-black:  900;
+$weight-book:    400;
+$weight-medium:  500;
+$weight-bold:    700;
+$weight-black:   900;
 
 body {
   font: $weight-book 1em/1.5em $sans;
@@ -26,16 +27,17 @@ h1,h2,h3,h4,h5 {
   text-align: center;
 
   @include bp-min-width($medium) {
-    @include font-size(30px);
+    @include font-size(27px);
   }
 }
 
 .title__h1 {
   @include font-size(30px);
   line-height: 1.25;
+  font-weight: $weight-book;
 
   @include bp-min-width($medium) {
-    @include font-size(60px);
+    font-size: 5vw;
     line-height: 1.1;
   }
 }

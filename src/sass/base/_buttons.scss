@@ -1,17 +1,22 @@
 
 a {
-  @include global-transition(.1s);
-
-	&:hover {
-	}
+  @include global-transition(.2s);
 }
 
 @mixin btn {
   display: inline-block;
+	padding: 6px 20px;
+	border: 2px solid $blue;
+  color: $blue;
 }
 
 .btn {
   @include btn;
+
+  &:hover {
+    background: $yellow;
+    border-color: $yellow;
+  }
 }
 
 input[type="submit"],

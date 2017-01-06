@@ -20,17 +20,14 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 1208px;
-  margin: 0 auto;
-
   @include bp-max-width($medium) {
     padding-left: 20px;
     padding-right: 20px;
   }
 
   @include bp-min-width($medium) {
-    width: 94%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
